@@ -2,10 +2,16 @@
 
 set -e
 
+# Check if the script is being run as root
+if [ "$EUID" -ne 0 ]; then
+    echo "Please run this script as root or with sudo."
+    exit 1
+fi
+
 # Define variables
-BINARY_URL="URL_TO_BINARY_FILE"
-CONFIG_URL="URL_TO_CONFIG_FILE"
-SERVICE_URL="URL_TO_SERVICE_FILE"
+BINARY_URL="https://github.com/madroots/cameraleech/raw/master/compiled/cameraleech"
+CONFIG_URL="https://github.com/madroots/cameraleech/raw/master/compiled/cameraleech.toml"
+SERVICE_URL="https://github.com/madroots/cameraleech/raw/master/compiled/cameraleech.service"
 
 # Define installation paths
 BINARY_PATH="/usr/local/bin/"
@@ -42,4 +48,4 @@ rm /tmp/cameraleech_binary
 rm /tmp/cameraleech_config.toml
 rm /tmp/cameraleech_service.service
 
-echo "Installation completed."
+echo "Installation completed. You should now configure cameraleech by editing $CONFIG_PATH and $SERVICE_PATH"
