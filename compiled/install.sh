@@ -3,9 +3,9 @@
 set -e
 
 # Define variables
-BINARY_URL="https://github.com/madroots/cameraleech/raw/master/compiled/cameraleech"
-CONFIG_URL="https://github.com/madroots/cameraleech/raw/master/compiled/cameraleech.toml"
-SERVICE_URL="https://github.com/madroots/cameraleech/raw/master/compiled/cameraleech.service"
+BINARY_URL="https://github.com/HDTS1/cameraleech/raw/master/compiled/cameraleech"
+CONFIG_URL="https://github.com/HDTS1/cameraleech/raw/master/compiled/cameraleech.toml"
+SERVICE_URL="https://github.com/HDTS1/cameraleech/raw/master/compiled/cameraleech.service"
 
 # Define installation paths
 BINARY_PATH="/usr/local/bin/"
