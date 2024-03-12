@@ -2,12 +2,6 @@
 
 set -e
 
-# Check if the script is being run as root
-if [ "$EUID" -ne 0 ]; then
-    echo "Please run this script as root or with sudo."
-    exit 1
-fi
-
 # Define variables
 BINARY_URL="https://github.com/madroots/cameraleech/raw/master/compiled/cameraleech"
 CONFIG_URL="https://github.com/madroots/cameraleech/raw/master/compiled/cameraleech.toml"
