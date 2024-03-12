@@ -42,4 +42,6 @@ rm /tmp/cameraleech_binary
 rm /tmp/cameraleech_config.toml
 rm /tmp/cameraleech_service.service
 
-echo "Installation completed. You should now configure cameraleech by editing $CONFIG_PATH and $SERVICE_PATH"
+echo "Installation completed."
+echo
+echo "You should now configure cameraleech by editing $CONFIG_PATH and $SERVICE_PATH"
