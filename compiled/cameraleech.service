@@ -1,0 +1,19 @@
+[Unit]
+Description=Cameraleech ffmpeg starter
+After=network.target remote-fs.target
+# Set rclone mount service below, if any
+#After=wasabi-mount.service
+#Wants=wasabi-mount.service
+
+[Service]
+Type=simple
+# Set user below
+User=master
+Group=master
+ExecStart=/usr/local/bin/cameraleech
+ExecReload=/bin/kill -s HUP $MAINPID
+TimeoutStopSec=300
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

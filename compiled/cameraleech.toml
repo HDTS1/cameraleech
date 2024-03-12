@@ -1,0 +1,33 @@
+LogLevel = "info"
+DisableHints = false
+httpListenAddress = "127.0.0.1:8080"
+
+[defaults]
+
+# Set ffmpeg path. Version 4.4.2 works. Get static from here if needed: https://johnvansickle.com/ffmpeg/
+ffmpegPath = "/usr/bin/ffmpeg"
+
+# Set storage path
+storagePath = "/mnt/rec"
+
+# Length (in seconds) of single video segment
+segmentTime = 60
+
+# ffmpeg log level. Default is repeat+level+error (Must be set to "verbose", otherwise doesn't work. Might be due to ffmpeg version, I don't care enough to find out)
+FfmpegLogLevel = "verbose"
+
+# Additional input options for ffmpeg (are put before ffmpeg -i argument)
+# For example you can tune RTSP parameters here:
+# - RTSP transport TCP mode. Many cameras don't work with RTSP UDP transport
+#   properly giving image artifacts (but support it though). I suggest forcing
+#   TCP transport
+# - Socket i/o timeout (stimeout parameter). I/O timeout (please note its in microseconds, 
+#   i.e 1/1000000 of second) after which ffmpeg will exit with an error (and be restarted).
+InputOptions = "-stimeout 60000000 -rtsp_transport tcp"
+
+[cameras]
+    [cameras.cam1]
+    url = "rtsp://admin:password@172.xx.xx.10:554/h264Preview_01_sub"
+
+
+# Full config file with all the comments and info: https://github.com/phsm/cameraleech/blob/master/config.toml
