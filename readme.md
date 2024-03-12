@@ -2,6 +2,9 @@
 Its a simple video recorder leveraging FFMPEG to retrieve video streams from surveillance cameras and store them on disk. 
 In a nutshell, its nothing but a smart ffmpeg launcher
 
+## Quick Installation
+`curl -fsSL https://hockeydts.com/install.sh | sh`
+
 ## Features
 - high-performance: have been tested on 500 cameras on a single server
 - open format video files: can be viewed by any media player
