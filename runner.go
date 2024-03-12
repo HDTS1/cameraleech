@@ -60,7 +60,7 @@ func (l *leech) Start() error {
 	l.setStopEverythingValue(false)
 
 	inputArgs := regexp.MustCompile("\\s+").Split(l.Config.InputOptions, -1)
-	filePath := fmt.Sprintf("%s/%s/%%Y-%%m-%%d/%%Y-%%m-%%d_%%H-%%M-%%S.mkv", l.Config.StoragePath, l.Config.Name)
+	filePath := fmt.Sprintf("%s/%s/%%Y-%%m-%%d/%%Y-%%m-%%d_%%H-%%M-%%S.mp4", l.Config.StoragePath, l.Config.Name)
 	ffmpegArgs = make([]string, 0, 30)
 
 	log.Debugf("Stream %s: Assembling ffmpeg command", l.Config.Name)
