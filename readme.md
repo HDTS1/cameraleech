@@ -3,7 +3,7 @@ Its a simple video recorder leveraging FFMPEG to retrieve video streams from sur
 In a nutshell, its nothing but a smart ffmpeg launcher
 
 ## Quick Installation
-`curl -fsSL https://github.com/madroots/cameraleech/raw/master/compiled/install.sh | sh`
+`curl -fsSL https://github.com/HDTS1/cameraleech/raw/master/compiled/install.sh | sh`
 
 ## Features
 - high-performance: have been tested on 500 cameras on a single server
